@@ -1,26 +1,24 @@
 #include <stdio.h>
-
 /**
- * main - prints all the numbers of base 16 in lowercase,
- * followed by a new line
+ * main - Entry point
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char ch;
+	char c = 'a';
+	int num;
 
-	for (ch = '0'; ch <= '9'; ch++)
+	for (num = 0; num < 16; num++)
 	{
-		putchar(ch);
-	}
-	for (ch = 'a'; ch <= 'f'; ch++)                                                                                                        
-	{                                                                                                                                       
-		putchar(ch);
+		if (num < 10)
+		{
+			putchar(num + '0');
+		} else
+		{
+			putchar(c);
+			c++;
+		}
 	}
 	putchar('\n');
 	return (0);
-
 }
-
-
-
