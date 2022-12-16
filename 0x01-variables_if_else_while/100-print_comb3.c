@@ -1,36 +1,29 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Print combinations of two different numbers
  * 
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int x, y;
+	int tens;
+	int ones;
 
-	for (x = 48; x <= 57; x++)
+	for (tens = 0; tens <= 9; tens++)
 	{
-		for (y = 48; y <= 57; y++)
+		for (ones = tens + 1; ones <= 9; ones++)
 		{
-			if (x == y || y <= x)
+			putchar(tens + '0');
+			putchar(ones + '0');
+			if (tens < 8)
 			{
+				putchar(',');
+				putchar(' ');
 			}
-			else
-			{
-				putchar(x);
-				putchar(y);
-			if (x == 56 && y == 57)
-			{
-			}
-			else
-				{
-					putchar(44);
-					putchar(' ');
-				}
-			}
-			}
-			}
+		}
+	}
 	putchar('\n');
+
 	return (0);
 }
